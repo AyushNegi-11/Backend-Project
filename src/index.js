@@ -27,9 +27,7 @@ connectDB()
 .catch((error) => {
     console.log("MONGO DB connection failed !!! ", error);
     
-})
-
-
+});
 
 /* This is the first approach. Writing all the database connecting code in the index file. Second one is making an another folder.
 

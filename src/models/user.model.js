@@ -49,7 +49,7 @@ const userSchema = new Schema(
 },{ timestamps: true })
 
 
-userSchema.pre("save", async function (next) {  // HOOK
+userSchema.pre("save", async function (next) {  // HOOK // Middleware
     if(!this.isModified("password")) 
         return next();
 
