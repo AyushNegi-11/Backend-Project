@@ -15,4 +15,14 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
+// SEGREGATION
+
+// routes import
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+app.use("/api/v1/users", userRouter)  // after '/api/v1/users', control goes to userRouter
+
+// http:localhost:8000/api/v1/users/register
+
 export { app }  // 2nd way to export
