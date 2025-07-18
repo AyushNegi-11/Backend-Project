@@ -43,7 +43,7 @@ const userSchema = new Schema(
         required: [true, "Password is Required"]  // this is having custom error message.
     },
     refreshToken: {
-        types: String
+        type: String
     }
 
 },{ timestamps: true })
