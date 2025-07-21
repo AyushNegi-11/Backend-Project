@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dream Website</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #eee;
+  }
+  a {
+    color: #0f9;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #0f9;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  nav a:hover {
+    background-color: #0f9;
+    color: #121212;
+  }
+  .user-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .user-area img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  .hero {
+    background: linear-gradient(135deg, #0f9, #06c);
+    color: #121212;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .hero h1 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+  }
+  .hero button {
+    background-color: #121212;
+    color: #0f9;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .hero button:hover {
+    background-color: #06c;
+    color: #fff;
+  }
+  main {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .sidebar {
+    flex: 0 0 200px;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+  }
+  .content {
+    flex: 1;
+  }
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .game-card {
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+  }
+  .game-card:hover {
+    transform: scale(1.05);
+    background-color: #0f9;
+    color: #121212;
+  }
+  .live-updates {
+    margin-top: 2rem;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: content-box;
+    animation: ticker 15s linear infinite;
+  }
+  @keyframes ticker {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .promotions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .promo-tile {
+    flex: 1 1 150px;
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .promo-tile:hover {
+    background-color: #0f9;
+    color: #121212;
+  }
+  footer {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  footer a {
+    margin: 0 0.5rem;
+  }
+  @media (max-width: 768px) {
+    header nav {
+      display: none;
+    }
+    main {
+      flex-direction: column;
+    }
+    .sidebar {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .hero {
+      padding: 2rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">DreamSite</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Games</a>
+    <a href="#">Promotions</a>
+    <a href="#">VIP</a>
+    <a href="#">Support</a>
+  </nav>
+  <div class="user-area">
+    <img src="https://via.placeholder.com/32" alt="User Avatar" />
+    <div>Balance: ₹1000</div>
+  </div>
+</header>
+<section class="hero">
+  <h1>Welcome to DreamSite</h1>
+  <button>Get Started</button>
+  <button>Join Now</button>
+  <button>Explore Games</button>
+</section>
+<main>
+  <aside class="sidebar">
+    <h3>User Profile</h3>
+    <p>Settings</p>
+    <p>Deposit/Withdraw</p>
+    <p>Support Chat</p>
+  </aside>
+  <section class="content">
+    <div class="game-grid">
+      <div class="game-card">Game 1</div>
+      <div class="game-card">Game 2</div>
+      <div class="game-card">Game 3</div>
+      <div class="game-card">Game 4</div>
+      <div class="game-card">Game 5</div>
+      <div class="game-card">Game 6</div>
+    </div>
+    <div class="live-updates">
+      <div class="ticker">Winner: User123 won ₹10,000! Jackpot hits ₹5,000,000! New game release coming soon!</div>
+    </div>
+    <div class="promotions">
+      <div class="promo-tile">Bonus Offer 1</div>
+      <div class="promo-tile">Bonus Offer 2</div>
+      <div class="promo-tile">Bonus Offer 3</div>
+    </div>
+  </section>
+</main>
+<footer>
+  <a href="#">Sitemap</a> |
+  <a href="#">Responsible Gaming</a> |
+  <a href="#">Terms</a> |
+  <a href="#">Privacy</a>
+  <div style="margin-top: 0.5rem;">&copy; 2025 DreamSite. All rights reserved.</div>
+</footer>
+</body>
+</html>
